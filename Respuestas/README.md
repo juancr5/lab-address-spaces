@@ -4,7 +4,8 @@ En esta tarea aprenderemos sobre unas herramientas útiles para examinar el uso 
 Esto solo será una breve pista de lo que es posible; será necesario sumergirse más profundamente para convertirte verdaderamente 
 en un experto (¡Como siempre!).
 
-## 1. ##  La primera herramienta que analizaremos es una herramienta muy simple, ``` free ```. Primero, abra una terminal de Linux y teclee ``` man free ```, lea su manual entero; es breve, no se preocupe! ¿Para qué sirve este comando?. Nota: Puede apoyarse en material web para entender la herramienta mediante ejemplos.
+## 1. ##  
+La primera herramienta que analizaremos es una herramienta muy simple, ``` free ```. Primero, abra una terminal de Linux y teclee ``` man free ```, lea su manual entero; es breve, no se preocupe! ¿Para qué sirve este comando?. Nota: Puede apoyarse en material web para entender la herramienta mediante ejemplos.
 
 - al abrir la terminal y ejecutar este comando se muestra un manual de esta herramienta el cual presenta la siguiente descripcion: 
 
@@ -12,6 +13,7 @@ free muestra la cantidad total de memoria física y de intercambio libre y usada
 
 ![alt tag](https://github.com/juancr5/lab-address-spaces/blob/master/Respuestas/Imagenes/01%20Free.png)
 
-## 2. ##  Ahora, ejecute ```free``` usando algunos argumentos que podrían ser útiles (por ejemplo, ```-m```, para mostrar 
+## 2. ##  
+Ahora, ejecute ```free``` usando algunos argumentos que podrían ser útiles (por ejemplo, ```-m```, para mostrar 
 la cantidad total de memoria en megabytes). ¿Cuánta memoria hay en su sistema?, ¿Cuánta está libre? 
 ¿Son estos valores los que usted esperaba?
