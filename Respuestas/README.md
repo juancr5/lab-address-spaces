@@ -14,4 +14,7 @@ en un experto (¡Como siempre!).
 la cantidad total de memoria en megabytes). ¿Cuánta memoria hay en su sistema?, ¿Cuánta está libre? 
 ¿Son estos valores los que usted esperaba?
 
+![alt tag](https://github.com/juancr5/lab-address-spaces/blob/master/Respuestas/Imagenes/02%20free%20-m.png)
+
+3. A continuación, cree un pequeño programa que use cierta cantidad de memoria, llamado ```memory-user.c.``` Este programa debe tomar un argumento por linea de comandos: el número de megabytes de memoria que usted usará. Cuando lo ejecute, el programa debe separar memoria para un arreglo (vector) y recorrer el arreglo, accediendo consecutivamente a cada entrada (por ejemplo, escribiendo un valor inicial a cada posición). El programa deberá hacer esto indefinidamente o, por lo menos, por una cierta cantidad de tiempo especificada también por línea de comandos.
 
