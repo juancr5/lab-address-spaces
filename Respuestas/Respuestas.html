@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Respuestas</h1>
+
+<p> 
+1. La primera herramienta que analizaremos es una herramienta muy simple, <code> free </code>. Primero, abra una terminal de Linux y teclee <code> man free </code>, lea su manual entero; es breve, no se preocupe! ¿Para qué sirve este comando?. Nota: Puede apoyarse en material web para entender la herramienta mediante ejemplos.
+</p>
+
+<p> - al abrir la terminal y ejecutar este comando se muestra un manual de esta herramienta el cual presenta la siguiente descripcion: 
+
+free muestra la cantidad total de memoria física y de intercambio libre y usada en el sistema, así como los búfers y cachés utilizados por el núcleo. La información se recopila analizando / proc / meminfo. Las columnas que se muestran son:
+total, usada(used), libre(free), compartida(shared),buffers, cache, buffers/cache y disponible(available).
+</p>
+
+<img src="Imagenes/01 Free.png" alt="Free">
+
+<p>
+2. Ahora, ejecute <code>free</code> usando algunos argumentos que podrían ser útiles (por ejemplo, <code>-m</code>, para mostrar la cantidad total de memoria en megabytes). ¿Cuánta memoria hay en su sistema?, ¿Cuánta está libre? ¿Son estos valores los que usted esperaba?
+</p>
+
+<p>
+Existen 2016 Megabytes disponibles y tambien hay 1450 Megabytes libres; mas o menos al ver la lista de procesos es comprensible el uso de memoria del sistema en tiempo real, los datos que que se evidencian son en medida comprensibles para hardware que se esta manejando.
+<p/>
+
+<img src="Imagenes/02 free -m.png" alt="Free -m">
+
+<p>
+3. A continuación, cree un pequeño programa que use cierta cantidad de memoria, llamado <code>memory-user.c.</code> Este programa debe tomar un argumento por linea de comandos: el número de megabytes de memoria que usted usará. Cuando lo ejecute, el programa debe separar memoria para un arreglo (vector) y recorrer el arreglo, accediendo consecutivamente a cada entrada (por ejemplo, escribiendo un valor inicial a cada posición). El programa deberá hacer esto indefinidamente o, por lo menos, por una cierta cantidad de tiempo especificada también por línea de comandos.
+</p>
+
+
+</body>
+</html>
