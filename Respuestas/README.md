@@ -10,7 +10,8 @@ Para responder a las preguntas lea y reflexione sobre el capítulo [The Abstract
 
 Adicionalmente, donde crea que sea necesario haga uso de los conceptos sobre procesos aprendidos en el laboratorio anterior.
 
-https://github.com/juancr5/lab-address-spaces/blob/master/Respuestas/Imagenes/01%20Free.png
+![alt tag](https://github.com/juancr5/lab-address-spaces/blob/master/Respuestas/Imagenes/01%20Free.png)
+
 
 ## Preguntas ##
 
