@@ -4,15 +4,15 @@
 #include <time.h>
 /*
 * main -  programa que use cierta cantidad de memoria, llamado memory-user.c.
-* Este programa debe tomar un argumento por linea de comandos: el n˙mero de megabytes
-* de memoria que usted usar·. Cuando lo ejecute, el programa debe separar memoria para
+* Este programa debe tomar un argumento por linea de comandos: el n√∫mero de megabytes
+* de memoria que usted usar√°. Cuando lo ejecute, el programa debe separar memoria para
 * un arreglo (vector) y recorrer el arreglo, accediendo consecutivamente a cada entrada
-* (por ejemplo, escribiendo un valor inicial a cada posiciÛn). El programa deber· hacer
+* (por ejemplo, escribiendo un valor inicial a cada posici√≥n). El programa deber√° hacer
 * esto indefinidamente o, por lo menos, por una cierta cantidad de tiempo especificada
-* tambiÈn por lÌnea de comandos
+* tambi√©n por l√≠nea de comandos
 * @argc: contador de argumentos
 * @argv: vector de argumentos
-* Return: 0 Èxito -1 si falla
+* Return: 0 √©xito -1 si falla
 */
 int main(int argc, char *argv[])
 {
@@ -23,8 +23,8 @@ int main(int argc, char *argv[])
         if(argc < 4 && argc > 1)
         {
 
-                cantidadMem = (atoi(argv[1]))*1000000;  /* cantidad de memoria en Mb */
-                char *vector = malloc(cantidadMem);  /* disposiciÛn din·mica en el heap */
+                cantidadMem = (atoi(argv[1]))*1e6;  /* cantidad de memoria en Mb */
+                char *vector = malloc(cantidadMem);  /* disposici√≥n din√°mica en el heap */
                 if(vector == NULL)
                 {
                         printf("Fallo en memoria\n");
@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
         }
         else
         {
-                printf("Parametros inadecuador, ingreso 2 Û 3 parametros \n");
+                printf("Parametros inadecuados, ingreso 2 √≥ 3 parametros \n");
         }
 
 
