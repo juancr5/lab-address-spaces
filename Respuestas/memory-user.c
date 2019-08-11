@@ -41,7 +41,6 @@ int main(int argc, char *argv[])
                                                 vector[i] = i;
                                         }
                                 }
-
                         }
                         else if(argc == 3)
                         {
@@ -61,7 +60,6 @@ int main(int argc, char *argv[])
         {
                 printf("Parametros inadecuados, ingreso 2 ó 3 parametros \n");
         }
-
 
         return 0;
 }
