@@ -22,7 +22,7 @@ la cantidad total de memoria en megabytes). ¿Cuánta memoria hay en su sistema?
 
 4. Ahora, mientras corra su programa memory-user.c, ejecute la herramienta free (en una terminal diferente, pero en la misma máquina). ¿Cómo cambia el uso total de memoria cuando su programa está corriendo?, ¿Qué pasa cuando se finaliza el programa memory-user (comando kill)?, ¿coinciden los valores con lo que usted esperaba? Intente esto para diferentes cantidades de uso de memoria. ¿Qué pasa cuando usted usa cantidades de memoria realmente grandes?.
 
-![alt tag]https://github.com/juancr5/lab-address-spaces/blob/master/Respuestas/Imagenes/03%20memory-user.c.png
+![alt tag](https://github.com/juancr5/lab-address-spaces/blob/master/Respuestas/Imagenes/03%20memory-user.c.png)
 
 si al almacenar una cantidad pequeña de mb se observa que el programa se finaliza con exito, disponiendo en memoria la cantidad de bytes ingresada por el usuario con cantidades de memoria grande el sistema operativo hace uso del swap cuando la cantidad de memoria libre es muy baja. 
 
