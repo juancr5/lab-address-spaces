@@ -12,7 +12,7 @@ en un experto (¡Como siempre!).
 
 2. Ahora, ejecute ```free``` usando algunos argumentos que podrían ser útiles (por ejemplo, ```-m```, para mostrar 
 la cantidad total de memoria en megabytes). ¿Cuánta memoria hay en su sistema?, ¿Cuánta está libre? 
-¿Son estos valores los que usted esperaba?
+¿Son estos valores los que usted esperaba?.
 
 ![alt tag](https://github.com/juancr5/lab-address-spaces/blob/master/Respuestas/Imagenes/02%20free%20-m.png)
 
@@ -26,9 +26,17 @@ la cantidad total de memoria en megabytes). ¿Cuánta memoria hay en su sistema?
 
 - Si al almacenar una cantidad pequeña de mb se observa que el programa se finaliza con exito, disponiendo en memoria la cantidad de bytes ingresada por el usuario con cantidades de memoria grande el sistema operativo hace uso del swap cuando la cantidad de memoria libre es muy baja. 
 
-- Se observa que al matar el proceso, la memoria usada y libre se restauran a los valores iniciales que se poseian antes de iniciar el proceso. Por lo tanto si los valores coincenden?; al no trabajar mucho con memoria no se posee un conocimineto absoluto de lo que deberia suceder, pero en la medida de lo evidenciado el programa se ejecuto de inmediato al hacer uso de malloc la memoria hizo un cambio de sus valores inmediatamente 
+- Se observa que al matar el proceso, la memoria usada y libre se restauran a los valores iniciales que se poseian antes de iniciar el proceso. Por lo tanto si los valores coincenden?; al no trabajar mucho con memoria no se posee un conocimineto absoluto de lo que deberia suceder, pero en la medida de lo evidenciado el programa se ejecuto de inmediato al hacer uso de malloc la memoria hizo un cambio de sus valores inmediatamente. 
  
-5. Ahora veremos una herramienta más conocida como pmap. Invierta algo de tiempo para leer el manual de pmap en detalle. ¿Cuál es la diferencia de pmap con free?
+5. Ahora veremos una herramienta más conocida como pmap. Invierta algo de tiempo para leer el manual de pmap en detalle. ¿Cuál es la diferencia de pmap con free?.
+
+-el Comando pmap reporta el mapa de la utilizacion de memoria por parte de un determinado proceso o procesos. De la infrmacion proporcionada pmap distingue entre la memoria usada por las librerias dinamicas que utiliza el proceso (columna mapped) de la que exclusivamente esta asignada a la propia aplicacion (columna writable).
+
+![alt tag](https://github.com/juancr5/lab-address-spaces/blob/master/Respuestas/Imagenes/04%20pmap%20example.jpg)
+
+Mientras que el comando free proporciona la informacion relativa a la cantidad de memoria fisica del sitema.
+
+![alt tag](https://github.com/juancr5/lab-address-spaces/blob/master/Respuestas/Imagenes/05%20free%20example.jpg)
 
 
  
