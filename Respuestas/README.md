@@ -38,6 +38,7 @@ Mientras que el comando free proporciona la informacion relativa a la cantidad d
 
 ![alt tag](https://github.com/juancr5/lab-address-spaces/blob/master/Respuestas/Imagenes/05%20free%20example.jpg)
 
+6. Para usar pmap, usted tiene que conocer el identificador de proceso (PID) del proceso en el que usted está interesado. Por lo tanto, primero ejecute ps auxw para ver una lista con todos lo procesos; entonces, seleccione alguno de su interés tal como un browser. Usted también puede usar su programa memory-user en este caso (de hecho, usted puede hacer que ese programa llame a getpid() para imprimir su PID para su conveniencia).
 
  
 
