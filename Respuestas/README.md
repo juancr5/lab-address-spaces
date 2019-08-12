@@ -1,4 +1,4 @@
-# The Abstraction: Address Spaces #
+# La Abstracción: Espacios De Direcciones #
 
 En esta tarea aprenderemos sobre unas herramientas útiles para examinar el uso de memoria virtual de sistemas basados en Linux. 
 Esto solo será una breve pista de lo que es posible; será necesario sumergirse más profundamente para convertirte verdaderamente 
@@ -18,7 +18,8 @@ la cantidad total de memoria en megabytes). ¿Cuánta memoria hay en su sistema?
 
 3. A continuación, cree un pequeño programa que use cierta cantidad de memoria, llamado ```memory-user.c.``` Este programa debe tomar un argumento por linea de comandos: el número de megabytes de memoria que usted usará. Cuando lo ejecute, el programa debe separar memoria para un arreglo (vector) y recorrer el arreglo, accediendo consecutivamente a cada entrada (por ejemplo, escribiendo un valor inicial a cada posición). El programa deberá hacer esto indefinidamente o, por lo menos, por una cierta cantidad de tiempo especificada también por línea de comandos.
 
-[memory-user.c](https://github.com/juancr5/lab-address-spaces/blob/master/Respuestas/memory-user.c)
+- [memory-user.c](https://github.com/juancr5/lab-address-spaces/blob/master/Respuestas/memory-user.c)
+- Un ejemplo de como ejecutar el codigo es el siguiente en el cual asiganmos "memoria en mb" y despues "tiempo (segundos)" ./memory "2" "60"
 
 4. Ahora, mientras corra su programa ```memory-user.c```, ejecute la herramienta ```free``` (en una terminal diferente, pero en la misma máquina). ¿Cómo cambia el uso total de memoria cuando su programa está corriendo?, ¿Qué pasa cuando se finaliza el programa memory-user (comando kill)?, ¿coinciden los valores con lo que usted esperaba? Intente esto para diferentes cantidades de uso de memoria. ¿Qué pasa cuando usted usa cantidades de memoria realmente grandes?.
 
@@ -55,6 +56,22 @@ la cantidad total de memoria en megabytes). ¿Cuánta memoria hay en su sistema?
 ![alt tag](https://github.com/juancr5/lab-address-spaces/blob/master/Respuestas/Imagenes/07%20pmap%20-x.png)
 
 8. Finalmente, ejecute pmap para su programa memory-user, con diferentes cantidades de memoria usada. ¿Qué puede ver en este caso? ¿La salida de pmap es siempre la que usted espera?
+
+![alt tag](https://github.com/juancr5/lab-address-spaces/blob/master/Respuestas/Imagenes/08%20procesos.png)
+
+- Al ejecutar memory-user con 50mb  y 500mb en un tiempo de 2 minutos se observa lo siguiente: 
+
+![alt tag](https://github.com/juancr5/lab-address-spaces/blob/master/Respuestas/Imagenes/08%20memory%2050.png)
+
+![alt tag](https://github.com/juancr5/lab-address-spaces/blob/master/Respuestas/Imagenes/08%20memory%20500.png)
+
+- Se observa que la cantidad total de memoria usada es la esperada de acuerd a la cantidad de memoria que se separa al momento de ejecutar el proceso.  
+
+- En las diferentes ejecuciones del programa se observa que únicamente cambia  el heap, para el resto de memoria usada en cada atributo de memoria es igual para cada ejecución.
+
+- Luego se procede a ejecutar el comando htop para observar mejor como se comporta el proceso memory-user con 500mb de memoria
+
+![alt tag](https://github.com/juancr5/lab-address-spaces/blob/master/Respuestas/Imagenes/08%20htop%20500.png)
 
 
  
