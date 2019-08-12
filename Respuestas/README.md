@@ -20,7 +20,7 @@ la cantidad total de memoria en megabytes). ¿Cuánta memoria hay en su sistema?
 
 [memory-user.c](https://github.com/juancr5/lab-address-spaces/blob/master/Respuestas/memory-user.c)
 
-4. Ahora, mientras corra su programa memory-user.c, ejecute la herramienta free (en una terminal diferente, pero en la misma máquina). ¿Cómo cambia el uso total de memoria cuando su programa está corriendo?, ¿Qué pasa cuando se finaliza el programa memory-user (comando kill)?, ¿coinciden los valores con lo que usted esperaba? Intente esto para diferentes cantidades de uso de memoria. ¿Qué pasa cuando usted usa cantidades de memoria realmente grandes?.
+4. Ahora, mientras corra su programa ```memory-user.c```, ejecute la herramienta ```free``` (en una terminal diferente, pero en la misma máquina). ¿Cómo cambia el uso total de memoria cuando su programa está corriendo?, ¿Qué pasa cuando se finaliza el programa memory-user (comando kill)?, ¿coinciden los valores con lo que usted esperaba? Intente esto para diferentes cantidades de uso de memoria. ¿Qué pasa cuando usted usa cantidades de memoria realmente grandes?.
 
 ![alt tag](https://github.com/juancr5/lab-address-spaces/blob/master/Respuestas/Imagenes/03%20memory-user.c.png)
 
@@ -28,17 +28,34 @@ la cantidad total de memoria en megabytes). ¿Cuánta memoria hay en su sistema?
 
 - Se observa que al matar el proceso, la memoria usada y libre se restauran a los valores iniciales que se poseian antes de iniciar el proceso. Por lo tanto si los valores coincenden?; al no trabajar mucho con memoria no se posee un conocimineto absoluto de lo que deberia suceder, pero en la medida de lo evidenciado el programa se ejecuto de inmediato al hacer uso de malloc la memoria hizo un cambio de sus valores inmediatamente. 
  
-5. Ahora veremos una herramienta más conocida como pmap. Invierta algo de tiempo para leer el manual de pmap en detalle. ¿Cuál es la diferencia de pmap con free?.
+5. Ahora veremos una herramienta más conocida como ```pmap```. Invierta algo de tiempo para leer el manual de ```pmap``` en detalle. ¿Cuál es la diferencia de ```pmap``` con ```free```?.
 
--el Comando pmap reporta el mapa de la utilizacion de memoria por parte de un determinado proceso o procesos. De la infrmacion proporcionada pmap distingue entre la memoria usada por las librerias dinamicas que utiliza el proceso (columna mapped) de la que exclusivamente esta asignada a la propia aplicacion (columna writable).
+- El Comando pmap reporta el mapa de la utilizacion de memoria por parte de un determinado proceso o procesos. De la infrmacion proporcionada pmap distingue entre la memoria usada por las librerias dinamicas que utiliza el proceso (columna mapped) de la que exclusivamente esta asignada a la propia aplicacion (columna writable).
 
 ![alt tag](https://github.com/juancr5/lab-address-spaces/blob/master/Respuestas/Imagenes/04%20pmap%20example.jpg)
 
-Mientras que el comando free proporciona la informacion relativa a la cantidad de memoria fisica del sitema.
+- Mientras que el comando free proporciona la informacion relativa a la cantidad de memoria fisica del sitema.
 
 ![alt tag](https://github.com/juancr5/lab-address-spaces/blob/master/Respuestas/Imagenes/05%20free%20example.jpg)
 
-6. Para usar pmap, usted tiene que conocer el identificador de proceso (PID) del proceso en el que usted está interesado. Por lo tanto, primero ejecute ps auxw para ver una lista con todos lo procesos; entonces, seleccione alguno de su interés tal como un browser. Usted también puede usar su programa memory-user en este caso (de hecho, usted puede hacer que ese programa llame a getpid() para imprimir su PID para su conveniencia).
+6. Para usar pmap, usted tiene que conocer el identificador de proceso (PID) del proceso en el que usted está interesado. Por lo tanto, primero ejecute ```ps auxw``` para ver una lista con todos lo procesos; entonces, seleccione alguno de su interés tal como un browser. Usted también puede usar su programa memory-user en este caso (de hecho, usted puede hacer que ese programa llame a ```getpid()``` para imprimir su PID para su conveniencia).
+
+- En este caso se uso el comando top para obtener el PID del proceso memory-user
+
+![alt tag](https://github.com/juancr5/lab-address-spaces/blob/master/Respuestas/Imagenes/06%20top.png)
+
+- al usar pmap con el PID del proceso, este arrojo los siguintes resultados
+
+![alt tag](https://github.com/juancr5/lab-address-spaces/blob/master/Respuestas/Imagenes/06%20pmap%20memory.png)
+
+7. Ahora ejecute ```pmap``` en alguno de estos procesos usando varias flags (como ```-X```) para revelar más detalles acerca del proceso. ¿Qué puede ver? ¿Cuántas entidades diferentes conforman un espacio de direcciones moderno, a diferencia de nuestra simple concepción de code/stack/heap?
+
+- al hacer uso de pmap con la herramienta -x se muestra varios archivos mapeados en memoria para el proceso seleccionado y sus atributos como lo son las direcciones en memoria, sus permisos correspondientes en donde se puede evidenciar direcciones de memoria asignadas al código(archivos), asignada al heap(annon) y asignada al stack(stack)  
+ 
+![alt tag](https://github.com/juancr5/lab-address-spaces/blob/master/Respuestas/Imagenes/07%20pmap%20-x.png)
+
+8. Finalmente, ejecute pmap para su programa memory-user, con diferentes cantidades de memoria usada. ¿Qué puede ver en este caso? ¿La salida de pmap es siempre la que usted espera?
+
 
  
 
